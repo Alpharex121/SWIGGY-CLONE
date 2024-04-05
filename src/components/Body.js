@@ -20,7 +20,6 @@ const Body = () => {
 
   useEffect(() => {
     getData();
-    // console.log("useEffect");
   }, []);
 
   async function getData() {
@@ -30,10 +29,10 @@ const Body = () => {
 
     const json = await data.json();
     setAllRestaurants(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestaurants(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   }
 

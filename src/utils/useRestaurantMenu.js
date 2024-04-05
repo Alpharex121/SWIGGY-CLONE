@@ -15,8 +15,10 @@ const useRestaurantMenu = (resId) => {
     // console.log(data);
 
     const menuList = await data.json();
+
+    // console.log(menuList);
     const mapData =
-      menuList.data.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards
+      menuList.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
         ?.map((x) => x?.card?.card)
         .filter(
           (x) =>

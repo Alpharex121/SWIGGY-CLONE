@@ -35402,13 +35402,12 @@ const Body = ()=>{
     }
     (0, _react.useEffect)(()=>{
         getData();
-    // console.log("useEffect");
     }, []);
     async function getData() {
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
-        setAllRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setAllRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
     if (!allRestaurants) return null;
     // if (filteredRestaurants.length === 0) return <h1>No Restaurant Found!</h1>;
@@ -35417,12 +35416,12 @@ const Body = ()=>{
         children: "\uD83D\uDD34Offline!! Please check you internet connection."
     }, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 46,
+        lineNumber: 45,
         columnNumber: 12
     }, undefined);
     return allRestaurants?.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmeruiDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 50,
+        lineNumber: 49,
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -35439,7 +35438,7 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 55,
+                        lineNumber: 54,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35451,13 +35450,13 @@ const Body = ()=>{
                         children: "Submit"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 64,
+                        lineNumber: 63,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 54,
+                lineNumber: 53,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35469,18 +35468,18 @@ const Body = ()=>{
                             ...restaurant.info
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 81,
+                            lineNumber: 80,
                             columnNumber: 15
                         }, undefined)
                     }, restaurant?.info?.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 77,
+                        lineNumber: 76,
                         columnNumber: 13
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 74,
+                lineNumber: 73,
                 columnNumber: 7
             }, undefined)
         ]
@@ -36724,7 +36723,7 @@ $RefreshReg$(_c, "RestaurantsMenu");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router-dom":"9xmpe","./RestaurantInfo":"l2Zp9","./RestaurantMenuInfo":"4etkm","../css/restaurantDetails.css":"1jwJu","./Shimmerui":"cGF0U","../utils/useRestaurantMenu":"fMOkH","../utils/useRestaurantDetail":"eUaBu","./MenuShimmerui":"eK9HT"}],"l2Zp9":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./RestaurantInfo":"l2Zp9","./Shimmerui":"cGF0U","./RestaurantMenuInfo":"4etkm","../css/restaurantDetails.css":"1jwJu","react-router-dom":"9xmpe","../utils/useRestaurantMenu":"fMOkH","../utils/useRestaurantDetail":"eUaBu","./MenuShimmerui":"eK9HT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"l2Zp9":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5c60 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -36951,7 +36950,7 @@ $RefreshReg$(_c, "RestaurantMenuInfo");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../css/restaurantMenu.css":"8HdWu","../config":"jtCLN","react-redux":"bdVon","../utils/cartSlice":"5RXlr"}],"8HdWu":[function() {},{}],"5RXlr":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../css/restaurantMenu.css":"8HdWu","../config":"jtCLN","react-redux":"bdVon","../utils/cartSlice":"5RXlr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8HdWu":[function() {},{}],"5RXlr":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "addItem", ()=>addItem);
@@ -40874,7 +40873,8 @@ const useRestaurantMenu = (resId)=>{
         const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6126255&lng=77.04108959999999&restaurantId=" + resId);
         // console.log(data);
         const menuList = await data.json();
-        const mapData = menuList.data.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.map((x)=>x?.card?.card).filter((x)=>x["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+        // console.log(menuList);
+        const mapData = menuList.data.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.map((x)=>x?.card?.card).filter((x)=>x["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
         setRestaurantMenu(mapData);
     }
     return restaurantMenu;
@@ -40906,9 +40906,8 @@ const useRestaurantDetail = (resId)=>{
     }, []);
     async function getMenu() {
         const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6126255&lng=77.04108959999999&restaurantId=" + resId);
-        // console.log(data);
         const menuList = await data.json();
-        setRestaurantDetail(menuList?.data?.cards[0]?.card?.card?.info);
+        setRestaurantDetail(menuList?.data?.cards[2]?.card?.card?.info);
     }
     return restaurantDetail;
 };
